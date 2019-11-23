@@ -1,12 +1,7 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
 
 const config = {
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000
-  },
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),

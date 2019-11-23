@@ -2,12 +2,12 @@
   "name": "weather-app",
   "version": "1.0.0",
   "description": "Empty project.",
-  "main": "index.js",
+  "private": true,
   "keywords": [],
   "author": "",
   "license": "ISC",
   "scripts": {
-    "start": "webpack-dev-server --open --config webpack.config.js",
+    "start": "webpack-dev-server --inline --hot",
     "clean": "rm dist/bundle.js",
     "build-dev": "webpack -d --mode development",
     "build-prod": "webpack -p --mode production"
