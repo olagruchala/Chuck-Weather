@@ -1,0 +1,10 @@
+{
+    "jokes": [{
+        "id": 0,
+        "joke": "Jakiś żart"
+
+    },{
+        "id": 1,
+        "joke": "Żart numer 2"
+    }]
+}

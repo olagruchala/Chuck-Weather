@@ -5,4 +5,11 @@ const jokes = [
   ["Chuck Norris potrafi nalać wody do sitka."]
 ];
 
-export default jokes;
+async function zarciki(){
+const fileJson = await fetch("src/jokes.json");
+const jokes = fileJson.json();
+console.log(jokes);
+}
+
+
+export default zarciki;
