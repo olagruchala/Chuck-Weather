@@ -1,5 +1,17 @@
-p {
-  font-size: 50px;
-  color: darkred;
+html {
+    margin: 0;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../img/sun-bgd.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+p {
+    font-size: 50px;
+    color: darkred;
+}
