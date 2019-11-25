@@ -1,16 +1,13 @@
 {
     "jokes": [{
-        "id": 0,
         "joke": "Chuck Norris nie zmiata kurzy, to kurze zmiatają przed nim."
-
     },{
-        "id": 1,
         "joke": "Każdy wie, że Chuck Norris doliczył do nieskończoności dwa razy. Ale nie każdy wie, że zaczynał od minus nieskończoności."
     },{
-        "id": 2,
         "joke": "Chuck Norris nie ma cienia."
     },{
-        "id": 3,
         "joke": "Chuck Norris potrafi nalać wody do sitka."
+    },{
+        "joke": "Chuck Norris potrafi użyć canvas w IE."
     }]
 }
