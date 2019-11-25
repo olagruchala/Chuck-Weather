@@ -6,7 +6,6 @@ async function jokes(){
     const indexTable = Math.floor(Math.random() *data.jokes.length);
     joke = data.jokes[indexTable].joke;
   })
-  jokesAPI();
   return joke;
 }
 
