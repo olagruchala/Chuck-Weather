@@ -10,6 +10,12 @@ First install dependencies:
 npm install
 ```
 
+To run localhost:
+
+```sh
+npm start
+```
+
 To create a production build:
 
 ```sh
