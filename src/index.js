@@ -1,5 +1,5 @@
 import "./styles.css";
-import zarciki from "./chuckJokes.js";
+import jokes from "./chuckJokes.js";
 
-zarciki();
+jokes().then((res) => { console.log("Żart chuck`a, plik index.js: "+res); /* tutaj łapiemy element div, w którym mają być żarty i wpisujemy wartość res */ });
 
