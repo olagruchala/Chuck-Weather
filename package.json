@@ -12,7 +12,11 @@
     "build-dev": "webpack -d --mode development",
     "build-prod": "webpack -p --mode production"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
@@ -21,6 +25,7 @@
     "eslint": "^6.6.0",
     "file-loader": "^4.3.0",
     "style-loader": "^1.0.0",
+    "url-loader": "^2.3.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"

@@ -7,11 +7,13 @@ html {
 }
 
 body {
-    background: url(../img/sun-bgd.png) no-repeat center center fixed;
+    background: url(images/sun-bgd.png) no-repeat center center fixed;
     background-size: cover;
+
 }
 
-p {
-    font-size: 50px;
-    color: darkred;
+
+
+.icons {
+    margin-left: 10%;
 }
