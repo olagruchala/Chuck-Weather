@@ -22,7 +22,6 @@ body {
   margin-top: 10%;
 }
 h2 {
-  padding: 10%;
   font-size: 3rem !important;
   text-align: center;
 }
@@ -39,4 +38,22 @@ label {
 }
 .days {
   padding: 10%;
+}
+h1 {
+  font-size: 5rem !important;
+}
+.temp_square {
+  background: cornsilk;
+  margin: 30px;
+  padding: 10%;
+}
+.weather_square {
+  background: cornsilk;
+  margin: 60px;
+  padding: 20%;
+}
+.joke_square {
+  background: cornsilk;
+  margin: 60px;
+  padding: 20%;
 }

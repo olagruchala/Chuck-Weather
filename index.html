@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <!-- first page -->
     <div id="firstpage" class="container  my-3">
       <div class="row justify-content-center ">
         <div class="col-5">
@@ -49,12 +50,14 @@
         </div>
       </div>
     </div>
+
+    <!-- second page -->
     <div id="secondpage" class="container justify-content-center  my-3">
       <div class="row col-2">
         <img src="src/images/home_icon.png" alt="home" width="80vh" />
       </div>
 
-      <div class="row justify-content-center">
+      <div class="row justify-content-center icon_space">
         <h2>Wybierz jedną z opcji</h2>
       </div>
       <div class="row justify-content-center chuck_div">
@@ -84,17 +87,20 @@
       </div>
 
       <div class="row justify-content-center icon_space">
-        <img src="src/images/rainbow.png" alt="rainbow"  />
+        <img src="src/images/rainbow.png" alt="rainbow" />
       </div>
-      <div class="row"></div>
-      <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+      <div class="row">
+        <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+      </div>
     </div>
+
+    <!-- third page -->
     <div id="thirdpage" class="container justify-content-center  my-3">
-      <div class="row col-2">
+      <div class="row col-2 ">
         <img src="src/images/home_icon.png" alt="home" width="80vh" />
       </div>
 
-      <div class="row justify-content-center ">
+      <div class="row justify-content-center icon_space ">
         <h2>Wybierz jedną z opcji</h2>
       </div>
 
@@ -126,8 +132,56 @@
       <div class="row justify-content-center ">
         <img src="src/images/rainbow.png" alt="rainbow" />
       </div>
+      <div class="row">
+        <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+      </div>
+    </div>
+
+    <!-- main weather page -->
+    <div id="firstpage" class="container  my-3">
+      <div class="row today_weather">
+        <h1>Pogoda na dziś</h1>
+      </div>
+      <div class="row justify-content-around">
+        <div class="col-4">
+          <h2>Szczecin</h2>
+        </div>
+        <div class="col-4 temp_square">
+          <h2 class="row  justify-content-around">9 st</h2>
+        </div>
+        <img
+          class="justify-content-start"
+          src="src/images/rainbow.png"
+          alt="rainbow"
+          height="10%"
+        />
+      </div>
       <div class="row"></div>
-      <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+
+      <div class="row justify-content-center chuck_div">
+        <div class="col-6">
+          <div class="row justify-content-center"></div>
+          <div class="row weather_square"></div>
+          <div class="row joke_square"></div>
+        </div>
+        <div class="col-6 chuckimg justify-content-center">
+          <img src="src/images/chuck-cowboy.png" alt="cowboy" height="400vh" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+        </div>
+        <div class="col-6 ">
+          <div class="row justify-content-end icon_space">
+            <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+          </div>
+
+          <div class="row justify-content-end icon_space">
+            <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="bundle.js"></script>
