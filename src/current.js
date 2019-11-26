@@ -9,6 +9,7 @@ fetch(url)
   .then(res => res.json())
   .then(data => {
     console.log(data);
+    const cityName = data.name;
     const { pressure, temp, humidity } = data.main;
     const { speed } = data.wind;
     const { description } = data.weather[0];
@@ -21,6 +22,7 @@ fetch(url)
     }
 
     console.log('pressure : '+pressure);
+    console.log('cityName : '+cityName);
     console.log('temp : '+temp);
     console.log('humidity : '+humidity);
     console.log('speed : '+speed);
@@ -29,3 +31,9 @@ fetch(url)
     console.log('snow: ' + snow);
   });
 
+const temp = document.getElementById('temperature');
+const icon = document.getElementById('icon');
+const description = document.getElementById('description');
+const pressure = document.getElementById('pressure');
+const wind = document.getElementById('wind');
+const rainfall = document.getElementById('rainfall');
