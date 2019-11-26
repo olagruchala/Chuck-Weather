@@ -21,9 +21,9 @@ body {
 .chuck_div {
   margin-top: 10%;
 }
-#secondpage h2 {
+h2 {
   padding: 10%;
-  font-size: 3rem;
+  font-size: 3rem !important;
   text-align: center;
 }
 label {
@@ -35,5 +35,8 @@ label {
   color: black;
 }
 .icon_space {
-  padding: 20%;
+  padding: 10%;
+}
+.days {
+  padding: 10%;
 }
