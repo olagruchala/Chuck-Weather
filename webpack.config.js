@@ -2,15 +2,14 @@
 const path = require('path');
 
 const config = {
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000
-  },
+  mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname),
     filename: 'bundle.js'
+  },
+  resolve: {
+    extensions: ['.js']
   },
   module: {
     rules: [
@@ -27,8 +26,8 @@ const config = {
         ]
       },
       {
-        test: /\.svg$/,
-        use: 'file-loader'
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: "file-loader"
       }
     ]
   }
