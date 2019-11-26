@@ -5,7 +5,7 @@ const config = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   resolve: {
@@ -30,7 +30,12 @@ const config = {
         use: "file-loader"
       }
     ]
-  }
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 8080
+  },
 };
 
 module.exports = config;

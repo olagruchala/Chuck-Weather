@@ -1,4 +1,4 @@
-import "./styles.css";
+import "../dist/styles.css";
 import {jokes, jokesAPI} from "./chuckJokes.js";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";

@@ -4,6 +4,7 @@ coverage/
 dist/*
 !dist/index.html
 !dist/jokes.json
+!dist/images
 
 node_modules/
 *.log
