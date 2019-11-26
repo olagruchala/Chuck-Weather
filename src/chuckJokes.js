@@ -1,8 +1,19 @@
-const jokes = [
-  ["Chuck Norris nie zmiata kurzy, to kurze zmiatają przed nim."],
-  ["Każdy wie, że Chuck Norris doliczył do nieskończoności dwa razy. Ale nie każdy wie, że zaczynał od minus nieskończoności."],
-  ["Chuck Norris nie ma cienia."],
-  ["Chuck Norris potrafi nalać wody do sitka."]
-];
+async function jokes(){
+  let joke = "";
+  await fetch("./jokes.json")
+  .then((res) => res.json())
+  .then((data) => {
+    const indexTable = Math.floor(Math.random() *data.jokes.length);
+    joke = data.jokes[indexTable].joke;
+  })
+  return joke;
+}
 
-export default jokes;
+async function jokesAPI(name)
+{
+  const response = await fetch(`https://api.chucknorris.io/jokes/random?name=${name}`);
+  let joke = await response.json();
+  return joke.value;
+}
+
+export {jokes, jokesAPI};
