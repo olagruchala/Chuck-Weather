@@ -18,3 +18,22 @@ body {
 .firstpage_input {
   margin-top: 15vh;
 }
+.chuck_div {
+  margin-top: 10%;
+}
+#secondpage h2 {
+  padding: 10%;
+  font-size: 3rem;
+  text-align: center;
+}
+label {
+  text-transform: uppercase;
+}
+#option {
+  padding: 30px;
+  text-align: center;
+  color: black;
+}
+.icon_space {
+  padding: 20%;
+}

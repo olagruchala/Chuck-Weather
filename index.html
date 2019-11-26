@@ -26,7 +26,7 @@
         <h2>with Chuck Weather</h2>
       </div>
 
-      <div class="row justify-content-center">
+      <div class="row justify-content-center chuck_div">
         <div class="col-5">
           <div class="row justify-content-center firstpage_input">
             <form action="/action_page.php">
@@ -48,6 +48,46 @@
           <img src="src/images/chuck-cowboy.png" alt="cowboy" height="400vh" />
         </div>
       </div>
+    </div>
+    <div id="secondpage" class="container justify-content-center  my-3">
+      <div class="row col-2">
+        <img src="src/images/home_icon.png" alt="home" width="80vh" />
+      </div>
+
+      <div class="row justify-content-center">
+        <h2>Wybierz jedną z opcji</h2>
+      </div>
+      <div class="row justify-content-center chuck_div">
+        <div class="row justify-content-center ">
+          <form action="/action_page.php">
+            <div class="form-group">
+              <label for="city">Wpisz miasto:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                name="cityname"
+              />
+              <p id="option">Lub</p>
+            </div>
+            <div class="form-group">
+              <label for="city_localization">Wyszukaj po lokalizacji:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city_localization"
+                name="city_local"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row justify-content-center icon_space">
+        <img src="src/images/rainbow.png" alt="rainbow" width="60%" />
+      </div>
+      <div class="row"></div>
+      <button type="button" class="btn btn-primary btn-lg">Powrót</button>
     </div>
 
     <script src="bundle.js"></script>
