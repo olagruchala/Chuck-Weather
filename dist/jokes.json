@@ -1,0 +1,39 @@
+{
+    "jokes": [{
+        "joke": "Chuck Norris nie zmiata kurzy, to kurze zmiatają przed nim."
+    },{
+        "joke": "Każdy wie, że Chuck Norris doliczył do nieskończoności dwa razy. Ale nie każdy wie, że zaczynał od minus nieskończoności."
+    },{
+        "joke": "Chuck Norris nie ma cienia."
+    },{
+        "joke": "Chuck Norris potrafi nalać wody do sitka."
+    },{
+        "joke": "Chuck Norris potrafi użyć canvas w IE."
+    },{
+        "joke": "Gdy Chuck Norris patrzy w chmury pocą się ze strachu. Nazywamy to deszczem."
+    },{
+        "joke": "Przed wielkim potopem Chuck Norris powiedział: Noe idzie deszcz. Tu parasolka nie wystarczy."
+    },{
+        "joke": "Tak naprawdę to Chuck Norris zaniósł pierścień do Mordoru."
+    }],
+
+    "snow": [{
+        "joke": "Są kalesonki?"
+    },{
+        "joke": "Pamiętaj! Nie jedz żółtego śniegu."
+    },{
+        "joke": "Pamietaj, aby napisać o tym znajomym. Oni nie mają okien w domu."
+    }],
+
+    "rain": [{
+        "joke": "Spokojnie, kiedyś przestanie..."
+    },{
+        "joke": "Pamietaj, aby napisać o tym znajomym. Oni nie mają okien w domu."
+    },{
+        "joke": "Gdy deszcz pada, beton suchym nie jest"
+    },{
+        "joke": "Przed wielkim potopem Chuck Norris powiedział: Noe idzie deszcz. Tu parasolka nie wystarczy."
+    },{
+        "joke": "Idzie deszcz. Tu parasolka nie pomoże..."
+    }]
+}
