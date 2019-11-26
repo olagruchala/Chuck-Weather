@@ -18,42 +18,57 @@ body {
 .firstpage_input {
   margin-top: 15vh;
 }
+
 .chuck_div {
   margin-top: 10%;
 }
+
 h2 {
   font-size: 3rem !important;
   text-align: center;
 }
+
 label {
   text-transform: uppercase;
 }
+
 #option {
   padding: 30px;
   text-align: center;
   color: black;
 }
+
 .icon_space {
   padding: 10%;
 }
+
 .days {
   padding: 10%;
 }
+
 h1 {
   font-size: 5rem !important;
 }
+
 .temp_square {
   background: cornsilk;
   margin: 30px;
   padding: 10%;
 }
+
 .weather_square {
   background: cornsilk;
   margin: 60px;
   padding: 20%;
 }
+
 .joke_square {
   background: cornsilk;
   margin: 60px;
   padding: 20%;
+}
+
+.five {
+  padding: 5%;
+  border: 1px solid black
 }
