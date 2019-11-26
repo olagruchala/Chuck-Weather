@@ -2,8 +2,8 @@
 .cache/
 coverage/
 dist/*
-#!dist/index.html
-#!dist/jokes.json
+!dist/index.html
+!dist/jokes.json
 
 node_modules/
 *.log
