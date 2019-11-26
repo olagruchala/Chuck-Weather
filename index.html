@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
+  <head>
+    <title>Chuck Weather</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
 
-<head>
-  <title>Chuck Weather</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="src/styles.css">
-</head>
-</head>
+  <body>
+    <div class="container  my-3">
+      <div class="row justify-content-center ">
+        <div class="col-5">
+          <img src="src/images/wind.png" alt="wind" width="80%" />
+        </div>
+        <div class="col-5 ">
+          <img src="src/images/cloud-main.png" alt="cloud" width="80%" />
+        </div>
+      </div>
 
-<body>
+      <div class="row justify-content-center">
+        <h1>Chuck Weather</h1>
+      </div>
+      <div class="row justify-content-center text-center ">
+        <h2>with Chuck Weather</h2>
+      </div>
 
-  <div class="container  my-3">
-    <div class="row justify-content-center ">
-      <div class="col-4"><img src="src/images/wind.png" alt="wind" width="80%" ></div>
-      <div class="col-4 "> <img src="src/images/cloud-main.png" alt="cloud" width="80%">
+      <div class="row justify-content-center">
+        <div class="col-5">
+          <div class="row justify-content-center firstpage_input">
+            <form action="/action_page.php">
+              <div class="form-group">
+                <label for="usr">Podaj imię</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="usr"
+                  name="username"
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary">Dalej</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-5 chuckimg justify-content-center">
+          <img src="src/images/chuck-cowboy.png" alt="cowboy" height="400vh" />
+        </div>
       </div>
     </div>
 
-    <div class="row justify-content-center">
-      <h1>Chuck Weather</h1>
-    </div>
-    <div class="row justify-content-center text-center ">
-      <h2> with
-        Chuck Weather</h2>
-    </div>
-  
- 
-    <div class="row justify-content-center">
-        <div class="col">
-         <div class="row"></div>
-          <div class="row"></div>
-        </div>
-       <div class="col"> <img src="src/images/chuck-cowboy.png" alt="cowboy" height="400vh"></div>
-    
-  </div>
-  </div>
-    
-
-  <script src="bundle.js"></script>
-
-</body>
-
+    <script src="bundle.js"></script>
+  </body>
 </html>

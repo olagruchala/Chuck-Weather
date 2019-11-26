@@ -1,19 +1,20 @@
 html {
-    margin: 0;
+  margin: 0;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background: url(images/sun-bgd.png) no-repeat center center fixed;
-    background-size: cover;
-
+  background: url(images/sun-bgd.png) no-repeat center center fixed;
+  background-size: cover;
 }
 
-
-
 .icons {
-    margin-left: 10%;
+  margin-left: 10%;
+}
+
+.firstpage_input {
+  margin-top: 15vh;
 }
