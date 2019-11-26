@@ -2,6 +2,7 @@
 const apiKey = "c9c2007393ea74869a3499e9027762f6";
 let city = "Thessaloniki"; //input.value -> toLowercase
 // Thessaloniki - city with rain
+// Denver - city with snow
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
 fetch(url)
@@ -9,17 +10,22 @@ fetch(url)
   .then(data => {
     console.log(data);
     const { pressure, temp, humidity } = data.main;
-    const { speed, deg } = data.wind;
+    const { speed } = data.wind;
     const { description } = data.weather[0];
-    const rain = data.rain['1h'];
-    // const snow = data.snow['1h'];
-    console.log(pressure);
-    console.log(temp);
-    console.log(humidity);
-    console.log(speed);
-    console.log(deg);
-    console.log(description);
-    console.log(rain);
-    // console.log(snow);
+    let { rain, snow } = data;
+    if (data.hasOwnProperty('rain')) {
+        rain = data.rain['1h'];
+    }
+    if (data.hasOwnProperty('snow')) {
+        snow = data.snow['1h'];
+    }
+
+    console.log('pressure : '+pressure);
+    console.log('temp : '+temp);
+    console.log('humidity : '+humidity);
+    console.log('speed : '+speed);
+    console.log('description : '+description);
+    console.log('rain: ' + rain);
+    console.log('snow: ' + snow);
   });
 
