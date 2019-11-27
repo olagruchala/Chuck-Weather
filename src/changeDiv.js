@@ -102,6 +102,13 @@ function changeDiv ()
         document.getElementById("thirdpage").style.display = "block";
     });
 
+    const geolocationButton = document.getElementById("geolocationBtn");
+    geolocationButton.addEventListener('click', function ()
+    {
+        document.getElementById("secondpage").style.display = "none";
+        document.getElementById("thirdpage").style.display = "block";
+    });
+
 }
 
 function localStorageChange(storageKey, value)
