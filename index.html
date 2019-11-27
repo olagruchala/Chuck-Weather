@@ -1,5 +1,191 @@
 <!DOCTYPE html>
 <html lang="pl-PL">
+
+  <head>
+    <title>Chuck Weather</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--  <link rel="stylesheet" href="src/styles.css" />-->
+  </head>
+
+  <body>
+    <!-- first page -->
+    <div id="firstpage" class="container  my-3">
+      <div class="row justify-content-center ">
+        <div class="col-5">
+          <img src="src/images/wind.png" alt="wind" width="80%" />
+        </div>
+        <div class="col-5 ">
+          <img src="src/images/cloud-main.png" alt="cloud" width="80%" />
+        </div>
+      </div>
+      <div class="row justify-content-center text-center ">
+        <h2>Check Weather<br />with</h2>
+      </div>
+      <div class="row justify-content-center">
+        <h1>Chuck Weather</h1>
+      </div>
+
+      <div class="row justify-content-center chuck_div">
+        <div class="col-5">
+          <div class="row justify-content-center firstpage_input">
+            <div class="form-group">
+              <label for="usr">Podaj imię</label>
+              <input
+                type="text"
+                class="form-control"
+                id="usr"
+                name="username"
+              />
+            </div>
+
+            <button type="submit" class="btn btn-primary">Dalej</button>
+          </div>
+        </div>
+        <div class="col-5 chuckimg justify-content-center">
+          <img src="src/images/chuck-cowboy.png" alt="cowboy" height="400vh" />
+        </div>
+      </div>
+    </div>
+
+    <!-- second page -->
+    <div id="secondpage" class="container justify-content-center  my-3">
+      <div class="row col-2">
+        <img src="src/images/home_icon.png" alt="home" width="80vh" />
+      </div>
+
+      <div class="row justify-content-center icon_space">
+        <h2>Wybierz jedną z opcji</h2>
+      </div>
+      <div class="row justify-content-center chuck_div">
+        <div class="row justify-content-center ">
+          <div class="form-group">
+            <label for="city">Wpisz miasto:</label>
+            <input type="text" class="form-control" id="city" name="cityname" />
+            <p id="option">Lub</p>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">
+                Wyszukaj po lokalizacji
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center icon_space">
+        <img src="src/images/rainbow.png" alt="rainbow" />
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+      </div>
+    </div>
+
+    <!-- third page -->
+    <div id="thirdpage" class="container justify-content-center  my-3">
+      <div class="row col-2 ">
+        <img src="src/images/home_icon.png" alt="home" width="80vh" />
+      </div>
+
+      <div class="row justify-content-center icon_space ">
+        <h2>Wybierz jedną z opcji</h2>
+      </div>
+
+      <div class="container col-8 ">
+        <div class="row justify-content-center days">
+          <button id="today_btn" type="button" class="btn btn-primary btn-lg">
+            Prognoza na dziś
+          </button>
+        </div>
+
+        <div class="row justify-content-center days">
+          <button
+            id="nextdays_btn"
+            type="button"
+            class="btn btn-primary btn-lg"
+          >
+            Prognoza 5-cio dniowa
+          </button>
+        </div>
+      </div>
+      <div class="row justify-content-center ">
+        <img src="src/images/rainbow.png" alt="rainbow" />
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+      </div>
+    </div>
+
+    <!-- main weather page -->
+    <div id="mainpage" class="container my-3">
+      <div class="row justify-content-center">
+        <h1>Pogoda na dziś</h1>
+      </div>
+
+      <div class="row">
+        <div class="col"><h2>Szczecin</h2></div>
+        <div class="col"><h2 class=" temp_square">9 st</h2></div>
+      </div>
+      <div class="row justify-content-center chuck_div">
+        <div class="col-6">
+          <div class="row weather_square">
+            <div class="col ">Opis</div>
+            <div class="w-100"></div>
+            <div class="col ">Ciśnienie</div>
+            <div class="w-100"></div>
+            <div class="col">Wiatr</div>
+            <div class="w-100"></div>
+            <div class="col ">Opady</div>
+            <div class="w-100"></div>
+          </div>
+          <div class="row joke_square">Joke</div>
+        </div>
+        <div class="col-6 chuckimg justify-content-center">
+          <img src="src/images/chuck-cowboy.png" alt="cowboy" height="400vh" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+        </div>
+        <div class="col-6 ">
+          <button type="button" class="btn btn-primary btn-lg">
+            Prognoza 5-dniowa
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- 5 days forecast -->
+    <div id="fivedays" class="container  my-3">
+      <div class="row today_weather">
+        <h1>Prognoza 5 dniowa</h1>
+      </div>
+      <div class="row">
+        <div class="col five">Dzień 1</div>
+        <div class="col five">Prognoza:</div>
+        <div class="w-100"></div>
+        <div class="col five">Dzień 2</div>
+        <div class="col five">Prognoza:</div>
+        <div class="w-100"></div>
+        <div class="col five">Dzień 3</div>
+        <div class="col five">Prognoza:</div>
+        <div class="w-100"></div>
+        <div class="col five">Dzień 4</div>
+        <div class="col five">Prognoza:</div>
+        <div class="w-100"></div>
+        <div class="col five">Dzień 5</div>
+        <div class="col five">Prognoza:</div>
+        <div class="w-100"></div>
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+      </div>
+    </div>
+
+    <script src="bundle.js"></script>
+  </body>
+=======
 <head>
   <title>Chuck Weather</title>
   <meta charset="utf-8" />
@@ -92,4 +278,5 @@
 
 <script src="bundle.js"></script>
 </body>
+
 </html>
