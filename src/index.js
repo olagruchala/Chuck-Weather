@@ -1,5 +1,5 @@
 import "./styles.css";
-import "./current"
+import "./current";
 import {jokes, jokesAPI} from "./chuckJokes.js";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";

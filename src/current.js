@@ -1,14 +1,11 @@
 
 const apiKey = "c9c2007393ea74869a3499e9027762f6";
-let city = "Thessaloniki"; //input.value -> toLowercase
-// Thessaloniki - city with rain
-// Denver - city with snow
+let city = "saint paul"; //input.value
 const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
 
 fetch(url)
   .then(res => res.json())
   .then(data => {
-    console.log(data);
     const cityName = data.name;
     const { pressure, temp, humidity } = data.main;
     const { speed } = data.wind;
@@ -16,24 +13,16 @@ fetch(url)
     let { rain, snow } = data;
     if (data.hasOwnProperty('rain')) {
         rain = data.rain['1h'];
+        document.getElementById('current_rainfall').innerHTML = `Rain: <strong>${rain}mm </strong><small style="color:gray;"><sup>*</sup>in last 1h</small>`
     }
     if (data.hasOwnProperty('snow')) {
         snow = data.snow['1h'];
+        document.getElementById('current_rainfall').innerHTML = `Snow: <strong>${snow}mm </strong><small style="color:gray;"><sup>*</sup>in last 1h</small>`
     }
-
-    console.log('pressure : '+pressure);
-    console.log('cityName : '+cityName);
-    console.log('temp : '+temp);
-    console.log('humidity : '+humidity);
-    console.log('speed : '+speed);
-    console.log('description : '+description);
-    console.log('rain: ' + rain);
-    console.log('snow: ' + snow);
-  });
-
-const temp = document.getElementById('temperature');
-const icon = document.getElementById('icon');
-const description = document.getElementById('description');
-const pressure = document.getElementById('pressure');
-const wind = document.getElementById('wind');
-const rainfall = document.getElementById('rainfall');
+    document.getElementById('cityName').innerHTML = cityName;
+    document.getElementById('current_temp').innerHTML = `${temp.toFixed(1)} \u2103`;
+    document.getElementById('current_description').innerHTML = `<strong>${description.toUpperCase()}</strong>`;
+    document.getElementById('current_pressure').innerHTML = `Pressure: <strong>${pressure}hPa</strong>`;
+    document.getElementById('current_wind').innerHTML = `Wind: <strong>${speed}km/h</strong>`;
+    document.getElementById('current_humidity').innerHTML = `Humidity: <strong>${humidity}%</strong>`;
+ });
