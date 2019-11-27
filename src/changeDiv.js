@@ -38,11 +38,6 @@ function changeDiv ()
         });
     }
 
-//LocalStorage
-//Jeszcze trzeba pamiętać o tym, że gdy jest użytkownik to pominąć wybór miasta
-//Aby zmienić imię/miasto wystarczy wywołać funkcję z odpowiednim parametrem np. localStorageChange('user','chuck');
-//Aby odczytac wartosc z localStorage: window.localStorage['parametr']
-
     const cityInput = document.getElementById("city");
     cityInput.addEventListener('keyup', function(){
         if(event.keyCode === 13)
