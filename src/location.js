@@ -38,7 +38,7 @@ function getSearchInputValue() {
 };
 
 function fetchWeatherByCity(city) {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${openWeatherApiKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${openWeatherApiKey}`;
 
     fetch(url)
         .then(r => r.json())
