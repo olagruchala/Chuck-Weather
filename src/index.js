@@ -1,5 +1,6 @@
 import "./styles.css";
 import "./current";
+import "./forecast.js";
 import {jokes, jokesAPI} from "./chuckJokes.js";
 import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
