@@ -4,7 +4,7 @@ import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import changeDiv from "./changeDiv.js"
 
-jokes().then((res) => { console.log("Żart chuck`a, plik index.js: "+res); /* tutaj łapiemy element div, w którym mają być żarty i wpisujemy wartość res */ });
-jokesAPI("UserName").then((res) => { console.log("Żart chuck`a, zewnętrzne API: "+res); /* tutaj łapiemy element div, w którym mają być żarty i wpisujemy wartość res */ });
+jokes().then((res) => { document.getElementsByClassName('joke_square')[0].innerHTML = "<p>Żart z pliku JSON:</p><br>"+res+"<br>"; });
+jokesAPI("UserName").then((res) => { document.getElementsByClassName('joke_square')[0].innerHTML += "<br><p>Żart z API:</p>"+res; });
 
 changeDiv();
