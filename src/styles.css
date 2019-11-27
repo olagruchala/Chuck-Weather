@@ -31,7 +31,8 @@ label {
 }
 
 .chuck_div {
-  margin-top: 10%;
+  /*margin-top: 10%;*/
+  margin-top: 0;
 }
 
 label {
@@ -142,4 +143,3 @@ h1 {
   padding: 5%;
   border: 1px solid black;
 }
-
