@@ -22,22 +22,46 @@
       </div>-->
       <div class="row justify-content-center text-center flex-column">
         <h2>Check Weather<br />with</h2>
-        <h1>Chuck Weather</h1>
+
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h1>Chuck Weather</h1>
+        </div>
       </div>
 
       <div class="row justify-content-center chuck_div">
-        <div class="col-5 justify-content-center">
-          <div id="terazNieWiem" class="row justify-content-center firstpage_input">
+        <div class="col-5">
+          <div class="row justify-content-center firstpage_input">
+            <div class="form-group">
+              <label for="usr">Podaj imię</label>
+              <input
+                type="text"
+                class="form-control"
+                id="usr"
+                name="username"
+              />
+            </div>
+
+            <button id="nextButton" class="btn btn-primary">Next</button>
+
           </div>
         </div>
-        <div class="col-5 chuckimg justify-content-center">
-          <img src="src/images/chuck-cowboy.png" alt="cowboy" height="400vh" />
+        <div class="col-5  justify-content-center">
+          <img
+            src="src/images/chuck-cowboy.png"
+            class="chuckimg"
+            alt="cowboy"
+          />
         </div>
       </div>
     </div>
 
     <!-- second page -->
-    <div id="secondpage" class="container justify-content-center wholescreen my-3">
+    <div
+      id="secondpage"
+      class="container justify-content-center wholescreen my-3"
+    >
       <div class="row justify-content-center icon_space">
         <h2>Select one of the following</h2>
       </div>
@@ -55,12 +79,15 @@
     </div>
 
     <!-- third page -->
-    <div id="thirdpage" class="container justify-content-center wholescreen my-3">
+    <div
+      id="thirdpage"
+      class="container justify-content-center wholescreen my-3"
+    >
       <div class="row justify-content-center icon_space ">
         <h2>Select one of the following</h2>
       </div>
 
-      <div class="container col-8 ">
+      <div class="container col-10">
         <div class="row justify-content-center days">
           <button id="today_btn" type="button" class="btn btn-primary btn-lg">
             Right now
@@ -73,9 +100,13 @@
           </button>
         </div>
       </div>
-      <div class="row justify-content-center ">
+      <div class="row justify-content-center icon_space ">
         <img src="src/images/rainbow.png" alt="rainbow" />
       </div>
+
+      <button id="back" type="button" class="btn goback btn-primary btn-lg">
+        Powrót
+      </button>
     </div>
 
     <!-- main weather page -->
@@ -85,18 +116,16 @@
       </div>
 
       <div class="row">
-        <div class="col"><h2 id="cityName">Szczecin</h2></div>
-        <div class="col"><h2 class="temp_square" id="current_temp"></h2></div>
+
+        <div class="col-5 text-right "><h2 class="city">Szczecin</h2></div>
+        <div class="col-3 text-right"><p class=" temp_square">9 st</p></div>
+        <div class="col-4 text-right"><p class=" temp_square">9 st</p></div>
       </div>
-      <div class="row justify-content-center my-0">
-        <div id="current_icone"></div>
-      </div>
-      <div class="row justify-content-center chuck_div">
-        <div class="col-6">
-          <div class="row weather_square">
-            <div class="col" id="current_description"></div>
-            <div class="w-100"></div>
-            <div class="col" id="current_pressure"></div>
+      <div class="row justify-content-center">
+        <div class="col-7">
+          <div class="row weather_square  ">
+            <div class="col ">Opis</div>
+
             <div class="w-100"></div>
             <div class="col" id="current_wind"></div>
             <div class="w-100"></div>
@@ -122,6 +151,10 @@
           </button>
         </div>
       </div>
+
+      <button id="back" type="button" class="btn goback btn-primary btn-lg">
+        Powrót
+      </button>
     </div>
     <!-- 5 days forecast -->
     <div id="fivedays" class="container wholescreen my-3">
