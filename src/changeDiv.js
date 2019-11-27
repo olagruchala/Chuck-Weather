@@ -12,10 +12,15 @@ function changeDiv ()
         const nextButton = document.getElementById("nextButton");
         nextButton.addEventListener('click', function ()
         {
-            localStorageChange('user', document.getElementById("usr").value);
+            let userName = document.getElementById("usr").value;
 
-            document.getElementById("firstpage").style.display = "none";
-            document.getElementById("secondpage").style.display = "block";
+            if(userName.length>2)
+            {
+                localStorageChange('user', document.getElementById("usr").value);
+                document.getElementById("firstpage").style.display = "none";
+                document.getElementById("secondpage").style.display = "block";
+            }
+
         });
         const userInput = document.getElementById("usr");
         userInput.addEventListener('keyup', function(){
@@ -42,6 +47,7 @@ function changeDiv ()
     cityInput.addEventListener('keyup', function(){
         if(event.keyCode === 13)
         {
+            localStorageChange('city', document.getElementById("city").value);
             document.getElementById("secondpage").style.display = "none";
             document.getElementById("thirdpage").style.display = "block";
         }
