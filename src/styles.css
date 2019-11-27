@@ -95,3 +95,33 @@ h1 {
 .space-medium {
   margin-top: 10%;
 }
+
+/*=============== FIRST PAGE ============*/
+#firstpage{
+  display: block;
+}
+
+/*=============== SECOND PAGE ============*/
+#secondpage{
+  display: none;
+}
+
+#confirmCityBtn{
+  margin-top: 20px;
+  width: 100%;
+}
+/*=============== THIRD PAGE ============*/
+#thirdpage{
+  display: none;
+}
+
+/*=============== MAIN PAGE ============*/
+#mainpage{
+  display: none;
+}
+
+/*=============== FIVE DAYS PAGE ============*/
+#fivedays{
+  display: none;
+}
+
