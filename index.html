@@ -10,7 +10,7 @@
 
   <body>
     <!-- first page -->
-    <div id="firstpage" class="container  my-3">
+    <div id="firstpage" class="container my-3 wholescreen">
       <div class="row justify-content-center ">
         <div class="col-5">
           <img src="src/images/wind.png" alt="wind" width="80%" />
@@ -49,7 +49,10 @@
     </div>
 
     <!-- second page -->
-    <div id="secondpage" class="container justify-content-center  my-3">
+    <div
+      id="secondpage"
+      class="container justify-content-center wholescreen my-3"
+    >
       <div class="row col-2">
         <img src="src/images/home_icon.png" alt="home" width="80vh" />
       </div>
@@ -58,31 +61,28 @@
         <h2>Wybierz jedną z opcji</h2>
       </div>
       <div class="row justify-content-center chuck_div">
-        <div class="row justify-content-center ">
-          <div class="form-group">
-            <label for="city">Wpisz miasto:</label>
-            <input type="text" class="form-control" id="city" name="cityname" />
-            <p id="option">Lub</p>
+        <div class="form-group">
+          <label for="city">Wpisz miasto:</label>
+          <input type="text" class="form-control" id="city" name="cityname" />
+          <p id="option">Lub</p>
 
-            <div class="form-group">
-              <button type="submit" class="btn btn-primary">
-                Wyszukaj po lokalizacji
-              </button>
-            </div>
+          <div class="form-group ">
+            <button type="submit" class="btn btn-primary">
+              Wyszukaj po lokalizacji
+            </button>
           </div>
         </div>
       </div>
-
-      <div class="row justify-content-center icon_space">
-        <img src="src/images/rainbow.png" alt="rainbow" />
-      </div>
-      <div class="row">
+      <div class="row space-medium">
         <button type="button" class="btn btn-primary btn-lg">Powrót</button>
       </div>
     </div>
 
     <!-- third page -->
-    <div id="thirdpage" class="container justify-content-center  my-3">
+    <div
+      id="thirdpage"
+      class="container justify-content-center wholescreen my-3"
+    >
       <div class="row col-2 ">
         <img src="src/images/home_icon.png" alt="home" width="80vh" />
       </div>
@@ -111,13 +111,15 @@
       <div class="row justify-content-center ">
         <img src="src/images/rainbow.png" alt="rainbow" />
       </div>
-      <div class="row">
-        <button type="button" class="btn btn-primary btn-lg">Powrót</button>
+      <div class="row ">
+        <button type="button" class="btn btn-primary btn-lg space">
+          Powrót
+        </button>
       </div>
     </div>
 
     <!-- main weather page -->
-    <div id="mainpage" class="container my-3">
+    <div id="mainpage" class="container wholescreen my-3">
       <div class="row justify-content-center">
         <h1>Pogoda na dziś</h1>
       </div>
@@ -156,7 +158,7 @@
       </div>
     </div>
     <!-- 5 days forecast -->
-    <div id="fivedays" class="container  my-3">
+    <div id="fivedays" class="container wholescreen my-3">
       <div class="row today_weather">
         <h1>Prognoza 5 dniowa</h1>
       </div>
@@ -180,6 +182,7 @@
       <div class="row">
         <button type="button" class="btn btn-primary btn-lg">Powrót</button>
       </div>
+      --> -->
     </div>
 
     <script src="bundle.js"></script>
