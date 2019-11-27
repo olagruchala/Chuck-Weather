@@ -1,6 +1,6 @@
-# empty-project
+# Weather app
 
-Empty project.
+Weather app with Chuck Norris jokes ;)
 
 ## Building and running on localhost
 
@@ -28,12 +28,3 @@ To create a development build:
 npm run build-dev
 ```
 
-## Running
-
-```sh
-node dist/bundle.js
-```
-
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)

@@ -1,5 +1,97 @@
-p {
-  font-size: 50px;
-  color: darkred;
+html {
+  margin: 0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(images/sun-bgd.png) no-repeat center center fixed;
+  background-size: cover;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.icons {
+  margin-left: 10%;
+}
+
+.firstpage_input {
+  margin-top: 15vh;
+}
+
+.chuck_div {
+  margin-top: 10%;
+}
+
+h2 {
+  font-size: 3rem !important;
+  text-align: center;
+}
+
+label {
+  text-transform: uppercase;
+}
+
+.chuck_div {
+  margin-top: 10%;
+}
+#secondpage h2 {
+  padding: 10%;
+  font-size: 3rem;
+  text-align: center;
+}
+label {
+  text-transform: uppercase;
+}
+
+#option {
+  padding: 30px;
+  text-align: center;
+  color: black;
+}
+
+.icon_space {
+  padding: 10%;
+}
+
+.days {
+  padding: 10%;
+}
+
+h1 {
+  font-size: 5rem !important;
+}
+
+.temp_square {
+  background: cornsilk;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
+.weather_square {
+  background: cornsilk;
+  margin: 60px;
+  padding: 20%;
+}
+
+.joke_square {
+  background: cornsilk;
+  margin: 60px;
+  padding: 20%;
+}
+
+.five {
+  padding: 5%;
+  border: 1px solid black;
+}
+.wholescreen {
+  height: 100vh;
+}
+.space {
+  margin-top: 30%;
+}
+.space-medium {
+  margin-top: 10%;
+}
