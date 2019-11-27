@@ -17,10 +17,6 @@ body {
   margin-left: 10%;
 }
 
-.firstpage_input {
-  margin-top: 15vh;
-}
-
 .chuck_div {
   margin-top: 10%;
 }
@@ -75,6 +71,26 @@ h1 {
   display: block;
 }
 
+.firstpage_input {
+  margin-top: 15vh;
+}
+
+#terazNieWiem{
+  min-height: 150px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.windImg{
+  width: 150%;
+  height: auto;
+}
+
+.cloudImg{
+  width: 130%;
+  height: auto;
+}
+
 /*=============== SECOND PAGE ============*/
 #secondpage{
   display: none;
@@ -112,6 +128,7 @@ h1 {
 }
 
 .joke_square {
+  flex-direction: column;
   background: cornsilk;
   margin: 60px;
   padding: 5%;
