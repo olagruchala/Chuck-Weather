@@ -10,6 +10,24 @@ const forecast = (cityName) => {
     })
 }
 
+//forecast by geolocation
+
+document.getElementById("geolocationBtn").addEventListener("click", () => {
+    let lon;
+    let lat;
+
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(position => {
+            lon = position.coords.longitude;
+            lat = position.coords.latitude;
+
+        fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=e87a11268be0c46ef77d272eeef4198d&units=metric`)
+            .then(resp => resp.json())
+            .then(resp => data(resp));
+        });  
+    }  
+});
+
 //temperature + icons for each day
 
 const data = (result) => {
