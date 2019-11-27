@@ -119,14 +119,15 @@
     <!-- main weather page -->
     <div id="mainpage" class="container wholescreen my-3">
       <div class="row justify-content-center">
-        <h1>Right now</h1>
+        <div class="col-12" text-center>
+          <h1>Right now</h1>
+        </div>
       </div>
-
       <div class="row">
         <div class="col-5 text-right ">
           <h2 class="city" id="cityName">Szczecin</h2>
         </div>
-        <div class="col-3 text-right">
+        <div class="col-3">
           <p class="current_icone" id="current_icone">9 st</p>
         </div>
         <div class="col-4 text-right">
@@ -150,42 +151,37 @@
           </div>
           <div class="row joke_square">Joke</div>
         </div>
-        <div class="col-6 chuckimg justify-content-center">
-          <img src="src/images/chuck-cowboy.png" alt="cowboy" height="400vh" />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <button
-            id="changeNameBtn"
-            type="button"
-            class="btn btn-primary btn-lg mb-3"
-          >
-            Change name
-          </button>
-          <button
-            id="changeCityBtn"
-            type="button"
-            class="btn btn-primary btn-lg mb-3"
-          >
-            Change city
-          </button>
-        </div>
-        <div class="col-6 ">
-          <button
-            id="nextdays_btn_main"
-            type="button"
-            class="btn btn-primary btn-lg"
-          >
-            5 Day
-          </button>
-        </div>
-      </div>
+        <div class="col-5  justify-content-center chuck_div">
+          <img
+            src="src/images/chuck-cowboy.png"
+            class="chuckimg"
+            alt="cowboy"
+          />
+          <div class="row">
+            <div class="col-5">
+              <button id="changeNameBtn" type="button" class="btn btn-primary ">
+                Change name
+              </button>
+              <button id="changeCityBtn" type="button" class="btn btn-primary ">
+                Change city
+              </button>
 
+              <button
+                id="nextdays_btn_main"
+                type="button"
+                class="btn btn-primary "
+              >
+                5 Days
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
       <button id="back" type="button" class="btn goback btn-primary btn-lg">
         Powrót
       </button>
     </div>
+
     <!-- 5 days forecast -->
     <div id="fivedays" class="container wholescreen my-3">
       <div class="row today_weather">
@@ -208,11 +204,10 @@
         <div class="col five">Forecast:</div>
         <div class="w-100"></div>
       </div>
-      <div class="row">
-        <button id="back" type="button" class="btn btn-primary btn-lg">
-          Back
-        </button>
-      </div>
+
+      <button id="back" type="button" class="btn btn-primary btn-lg">
+        Back
+      </button>
     </div>
 
     <script src="bundle.js"></script>

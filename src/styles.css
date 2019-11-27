@@ -92,18 +92,18 @@ h1 {
   margin-top: 15vh;
 }
 
-#terazNieWiem{
+#terazNieWiem {
   min-height: 150px;
   flex-direction: column;
   align-items: center;
 }
 
-.windImg{
+.windImg {
   width: 150%;
   height: auto;
 }
 
-.cloudImg{
+.cloudImg {
   width: 130%;
   height: auto;
 }
@@ -147,7 +147,7 @@ h1 {
 }
 
 .joke_square {
-  flex-direction: column;
+  /* flex-direction: column; */
   background: cornsilk;
 
   padding: 10px;
