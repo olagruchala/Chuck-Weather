@@ -1,6 +1,6 @@
 async function jokes(){
   let joke = "";
-  await fetch("./jokes.json")
+  await fetch("./src/jokes.json")
     .then((res) => res.json())
     .then((data) => {
       const indexTable = Math.floor(Math.random() *data.jokes.length);
