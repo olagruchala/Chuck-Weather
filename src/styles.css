@@ -17,10 +17,6 @@ body {
   margin-left: 10%;
 }
 
-.firstpage_input {
-  margin-top: 15vh;
-}
-
 .chuck_div {
   margin-top: 10%;
 }
@@ -38,11 +34,7 @@ label {
   /*margin-top: 10%;*/
   margin-top: 0;
 }
-#secondpage h2 {
-  padding: 10%;
-  font-size: 3rem;
-  text-align: center;
-}
+
 label {
   text-transform: uppercase;
 }
@@ -65,6 +57,65 @@ h1 {
   font-size: 5rem !important;
 }
 
+.wholescreen {
+  height: 100vh;
+}
+.space {
+  margin-top: 30%;
+}
+.space-medium {
+  margin-top: 10%;
+}
+
+/*=============== FIRST PAGE ============*/
+#firstpage{
+  display: block;
+}
+
+.firstpage_input {
+  margin-top: 15vh;
+}
+
+#terazNieWiem{
+  min-height: 150px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.windImg{
+  width: 150%;
+  height: auto;
+}
+
+.cloudImg{
+  width: 130%;
+  height: auto;
+}
+
+/*=============== SECOND PAGE ============*/
+#secondpage{
+  display: none;
+}
+
+#secondpage h2 {
+  padding: 10%;
+  font-size: 3rem;
+  text-align: center;
+}
+
+#confirmCityBtn{
+  margin-top: 20px;
+  width: 100%;
+}
+/*=============== THIRD PAGE ============*/
+#thirdpage{
+  display: none;
+}
+/*=============== MAIN PAGE ============*/
+#mainpage{
+  display: none;
+}
+
 .temp_square {
   background: cornsilk;
   padding-top: 10%;
@@ -78,26 +129,17 @@ h1 {
 }
 
 .joke_square {
+  flex-direction: column;
   background: cornsilk;
   margin: 60px;
-  padding: 20%;
+  padding: 5%;
+}
+/*=============== FIVE DAYS PAGE ============*/
+#fivedays{
+  display: none;
 }
 
 .five {
   padding: 5%;
   border: 1px solid black;
-}
-.wholescreen {
-  height: 100vh;
-}
-.space {
-  margin-top: 30%;
-}
-.space-medium {
-  margin-top: 10%;
-}
-
-#current_icone {
-  padding: 0;
-  margin: 0;
 }
