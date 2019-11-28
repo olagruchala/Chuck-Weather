@@ -11,7 +11,7 @@ function changeDiv ()
         document.getElementById("terazNieWiem").innerHTML = 
             "<div class='form-group'>"+
             "<label for='usr'>Enter your name</label>"+
-            "<input type='text' class='form-control' id='usr' name='username' min-length='3' maxlength='15' placeholder='My name is...'/><br>"+
+            "<input type='text' class='form-control' id='usr' name='username' minlength='3' maxlength='15' placeholder='My name is...'/><br>"+
             "<button id='nextButton' class='btn btn-primary btn-lg mp-2'>Next</button>"+
             "</div>";
         const nextButton = document.getElementById("nextButton");

@@ -76,28 +76,27 @@
     <!-- main weather page -->
     <div id="mainpage" class="container wholescreen my-3">
       <div class="row justify-content-center">
-        <div class="col-12" text-center>
-          <h1>Right now</h1>
+        <div class="col-12 text-center">
+          <h1 class="city text-center mx-auto" id="cityName"></h1>
         </div>
       </div>
       <div class="row">
-        <div class="col-5 text-right ">
-          <h2 class="city" id="cityName">Szczecin</h2>
+        <div class="col-5 text-right justify-content-center">
+          <h2 class="text-left">Current weather</h2>
         </div>
         <div class="col-3">
-          <p class="current_icone" id="current_icone">9 st</p>
+          <p class="current_icone mr-3" id="current_icone"></p>
         </div>
         <div class="col-4 text-right">
-          <p class=" temp_square" id="current_temp">9 st</p>
+          <p class=" temp_square" id="current_temp"></p>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-7">
-          <div class="row weather_square">
+          <div class="row weather_square py-2">
             <div class="col" id="current_description"></div>
             <div class="w-100"></div>
             <div class="col" id="current_pressure"></div>
-
             <div class="w-100"></div>
             <div class="col" id="current_wind"></div>
             <div class="w-100"></div>
@@ -106,24 +105,28 @@
             <div class="col " id="current_rainfall"></div>
             <div class="w-100"></div>
           </div>
-          <div class="row joke_square">Joke</div>
+          <div class="row joke_square">Chuck says:</div>
         </div>
-        <div class="col-5  justify-content-center chuck_div">
+        <div class="col-5 justify-content-center chuck_div">
           <img src="src/images/chuck-cowboy.png" class="chuckimg" alt="cowboy"/>
-          <div class="row">
-            <div class="col-5">
-              <button id="changeNameBtn" type="button" class="btn btn-primary ">
-                Change name
-              </button>
-              <button id="changeCityBtn" type="button" class="btn btn-primary ">
-                Change city
-              </button>
-
-              <button id="nextdays_btn_main" type="button" class="btn btn-primary">
-                5 Days
-              </button>
-            </div>
+        </div>
+        <div class="row my-3">
+          <div class="col-3">
+            <button id="changeNameBtn" type="button" class="btn btn-primary btn-sm">
+              Change name
+            </button>
           </div>
+          <div class="col-3">
+            <button id="changeCityBtn" type="button" class="btn btn-primary btn-sm">
+              Change city
+            </button>
+          </div>
+          <div class="col-6 text-right">
+            <button id="nextdays_btn_main" type="button" class="btn btn-primary btn-sm">
+              5 Days
+            </button>
+          </div>
+        </div>
         </div>
       </div>
     </div>
