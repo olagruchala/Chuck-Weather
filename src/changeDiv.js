@@ -1,8 +1,13 @@
+import fetchWeatherByCity from "./location";
+
 function changeDiv ()
 {
-    if(window.localStorage['user']===undefined)
+    let storageUser = window.localStorage['user'];
+    let storageCity = window.localStorage['city'];
+
+    if (!storageUser)
     {
-        //Wyświetlamy pole input
+        // Wyświetlamy pole input dla nowego użytkownika
         document.getElementById("terazNieWiem").innerHTML = 
             "<div class='form-group'>"+
             "<label for='usr'>Enter your name</label>"+
@@ -26,18 +31,20 @@ function changeDiv ()
         userInput.addEventListener('keyup', function(){
             if(event.keyCode === 13)
             {
+                localStorageChange('user', document.getElementById("usr").value);
                 document.getElementById("firstpage").style.display = "none";
                 document.getElementById("secondpage").style.display = "block";
             }
         });
     }
-    else{
-        //Wyświetlamy imie użytkownika
+    else {
+        //Wyświetlamy imie użytkownika na pierwszej stronie powitalnej dla zapisanego użytkownika
         document.getElementById("terazNieWiem").innerHTML =
-        "<h4>Cześć, "+window.localStorage['user']+"!</h4><br><button id='showWeatherBtn' class='btn btn-primary btn-lg mp-2'>Show weather</button>";
+        `<h4>Cześć, ${storageUser}!</h4><br><button id='showWeatherBtn' class='btn btn-primary btn-lg mp-2'>Show weather</button>`;
         const showWeatherButton = document.getElementById("showWeatherBtn");
         showWeatherButton.addEventListener('click', function ()
         {
+            fetchWeatherByCity(storageCity);
             document.getElementById("firstpage").style.display = "none";
             document.getElementById("mainpage").style.display = "block";
         });
@@ -51,6 +58,14 @@ function changeDiv ()
             document.getElementById("secondpage").style.display = "none";
             document.getElementById("thirdpage").style.display = "block";
         }
+    });
+
+    const confirmCityButton = document.getElementById("confirmCityBtn");
+    confirmCityButton.addEventListener('click', function ()
+    {
+        localStorageChange('city', document.getElementById("city").value);
+        document.getElementById("secondpage").style.display = "none";
+        document.getElementById("thirdpage").style.display = "block";
     });
 
     const todayButton = document.getElementById("today_btn");
@@ -84,6 +99,7 @@ function changeDiv ()
     const changeNameButton = document.getElementById("changeNameBtn");
     changeNameButton.addEventListener('click', function ()
     {
+        localStorage.removeItem("user");
         document.getElementById("mainpage").style.display = "none";
         document.getElementById("firstpage").style.display = "block";
     });
@@ -91,22 +107,9 @@ function changeDiv ()
     const changeCityButton = document.getElementById("changeCityBtn");
     changeCityButton.addEventListener('click', function ()
     {
+        localStorage.removeItem("city");
         document.getElementById("mainpage").style.display = "none";
         document.getElementById("secondpage").style.display = "block";
-    });
-
-    const confirmCityButton = document.getElementById("confirmCityBtn");
-    confirmCityButton.addEventListener('click', function ()
-    {
-        document.getElementById("secondpage").style.display = "none";
-        document.getElementById("thirdpage").style.display = "block";
-    });
-
-    const geolocationButton = document.getElementById("geolocationBtn");
-    geolocationButton.addEventListener('click', function ()
-    {
-        document.getElementById("secondpage").style.display = "none";
-        document.getElementById("thirdpage").style.display = "block";
     });
 
 }
