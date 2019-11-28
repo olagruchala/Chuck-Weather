@@ -62,9 +62,13 @@ function changeDiv ()
     const confirmCityButton = document.getElementById("confirmCityBtn");
     confirmCityButton.addEventListener('click', function ()
     {
-        localStorageChange('city', document.getElementById("city").value);
-        document.getElementById("secondpage").style.display = "none";
-        document.getElementById("thirdpage").style.display = "block";
+        let cityValue = document.getElementById("city").value;
+        if(cityValue.length>4)
+        {
+            localStorageChange('city', document.getElementById("city").value);
+            document.getElementById("secondpage").style.display = "none";
+            document.getElementById("thirdpage").style.display = "block";
+        }
     });
 
     const todayButton = document.getElementById("today_btn");
