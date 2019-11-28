@@ -1,6 +1,7 @@
 import {openWeatherApiKey} from "./config.js";
 
 document.getElementById("geolocationBtn").addEventListener("click", () => {
+    console.log('clik');
     let lon;
     let lat;
 
@@ -8,14 +9,19 @@ document.getElementById("geolocationBtn").addEventListener("click", () => {
         navigator.geolocation.getCurrentPosition(position => {
             lon = position.coords.longitude;
             lat = position.coords.latitude;
-
         const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${openWeatherApiKey}`;
 
         fetch(url)
             .then(r => r.json())
-            .then(data => setWeatherFromData(data));
-        });  
-    }  
+            .then(data => {
+                localStorage.setItem("city", data.name);
+                setWeatherFromData(data);
+                document.getElementById("secondpage").style.display = "none";
+                document.getElementById("thirdpage").style.display = "block";
+            })
+        })
+    }
+
 });
 
 document.getElementById("confirmCityBtn").addEventListener("click", onSearchButtonClick); 
@@ -25,17 +31,17 @@ function onSearchInputKeypress(e) {
     if (e.keyCode === 13) {
       const city = getSearchInputValue();
       fetchWeatherByCity(city);
-    };
-};
+    }
+}
 
 function onSearchButtonClick() {
     const city = getSearchInputValue();
     fetchWeatherByCity(city);
-};
+}
   
 function getSearchInputValue() {
     return document.getElementById('city').value;
-};
+}
 
 function fetchWeatherByCity(city) {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${openWeatherApiKey}`;
@@ -43,7 +49,7 @@ function fetchWeatherByCity(city) {
     fetch(url)
         .then(r => r.json())
         .then(data => setWeatherFromData(data));
-};
+}
 
 function setWeatherFromData(data) {
     console.log(data);
@@ -71,3 +77,5 @@ function setWeatherFromData(data) {
     document.getElementById('current_wind').innerHTML = `Wind: <strong>${speed}km/h</strong>`;
     document.getElementById('current_humidity').innerHTML = `Humidity: <strong>${humidity}%</strong>`;
  }
+
+ export default fetchWeatherByCity;
