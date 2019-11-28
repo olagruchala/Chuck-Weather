@@ -13,7 +13,6 @@ function changeDiv ()
         nextButton.addEventListener('click', function ()
         {
             let userName = document.getElementById("usr").value;
-
             if(userName.length>2)
             {
                 localStorageChange('user', document.getElementById("usr").value);
@@ -98,6 +97,7 @@ function changeDiv ()
     const confirmCityButton = document.getElementById("confirmCityBtn");
     confirmCityButton.addEventListener('click', function ()
     {
+        localStorageChange('city', document.getElementById("city").value);
         document.getElementById("secondpage").style.display = "none";
         document.getElementById("thirdpage").style.display = "block";
     });
