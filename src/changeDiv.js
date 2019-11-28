@@ -18,7 +18,6 @@ function changeDiv ()
         nextButton.addEventListener('click', function ()
         {
             let userName = document.getElementById("usr").value;
-
             if(userName.length>2)
             {
                 localStorageChange('user', document.getElementById("usr").value);
