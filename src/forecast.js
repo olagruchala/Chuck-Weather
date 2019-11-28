@@ -2,13 +2,16 @@
 
 const forecast = (cityName) => {
     fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=e87a11268be0c46ef77d272eeef4198d&units=metric`)
-    .then(resp => {
-        return resp.json();
-    })
-    .then (resp => {
-        data(resp);
-    })
+    .then(resp => resp.json())
+    .then(resp => data(resp));
 }
+
+document.getElementById('confirmCityBtn').addEventListener('click', () => {
+    let cityName = document.getElementById('city').value;
+    if(cityName) {
+        forecast(cityName);
+    }
+})
 
 //forecast by geolocation
 
