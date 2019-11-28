@@ -1,4 +1,5 @@
 import fetchWeatherByCity from "./location";
+import forecastStorage from "./forecast";
 
 function changeDiv ()
 {
@@ -81,6 +82,7 @@ function changeDiv ()
     const nextDaysButton = document.getElementById("nextdays_btn");
     nextDaysButton.addEventListener('click', function ()
     {
+        forecastStorage(storageCity);
         document.getElementById("thirdpage").style.display = "none";
         document.getElementById("fivedays").style.display = "block";
     });
@@ -88,6 +90,7 @@ function changeDiv ()
     const nextDaysButtonMain = document.getElementById("nextdays_btn_main");
     nextDaysButtonMain.addEventListener('click', function ()
     {
+        forecastStorage(storageCity);
         document.getElementById("mainpage").style.display = "none";
         document.getElementById("fivedays").style.display = "block";
     });
