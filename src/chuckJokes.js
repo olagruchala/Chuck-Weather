@@ -8,7 +8,6 @@ async function jokes(){
     });
   return joke;
 }
-
 async function jokesAPI(name)
 {
   const response = await fetch(`https://api.chucknorris.io/jokes/random?name=${name}`);

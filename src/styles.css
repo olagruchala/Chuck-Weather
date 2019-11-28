@@ -1,5 +1,6 @@
 html {
   margin: 0;
+  font-size: 16px;
 }
 
 * {
@@ -127,29 +128,34 @@ h1 {
 #thirdpage {
   display: none;
 }
-/*=============== MAIN PAGE ============*/
+/*=============== MAIN PAGE - current weather ============*/
 #mainpage {
   display: none;
 }
 
+#mainpage h1 {
+  padding: 3% 0;
+}
 .temp_square {
   background: cornsilk;
-  padding-top: 10%;
-
+  font-size: 1.5em;
+  font-weight: 500;
   display: inline-block;
-  padding: 30px;
+  padding: 18px;
+  border-radius: 25px 25px 25px 0;
 }
 
 .weather_square {
   background: cornsilk;
   margin-bottom: 20px;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
+  border-radius: 25px 25px 0 25px;
 }
 
 .joke_square {
   /* flex-direction: column; */
   background: cornsilk;
-
+  border-radius: 25px 0 25px 25px;
   padding: 10px;
 }
 /*=============== FIVE DAYS PAGE ============*/

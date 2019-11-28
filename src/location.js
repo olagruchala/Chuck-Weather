@@ -71,7 +71,7 @@ function setWeatherFromData(data) {
     }
     document.getElementById('current_icone').innerHTML = `<img width="180%" src="http://openweathermap.org/img/wn/${icon}@2x.png">`;
     document.getElementById('cityName').innerHTML = cityName;
-    document.getElementById('current_temp').innerHTML = `${temp.toFixed(1)} \u2103`;
+    document.getElementById('current_temp').innerHTML = `${temp.toFixed(1)}\u2103`;
     document.getElementById('current_description').innerHTML = `<strong>${description.toUpperCase()}</strong>`;
     document.getElementById('current_pressure').innerHTML = `Pressure: <strong>${pressure}hPa</strong>`;
     document.getElementById('current_wind').innerHTML = `Wind: <strong>${speed}km/h</strong>`;
