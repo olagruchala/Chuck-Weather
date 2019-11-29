@@ -105,6 +105,7 @@ function changeDiv ()
     const changeNameButton = document.getElementById("changeNameBtn");
     changeNameButton.addEventListener('click', function ()
     {
+        location.reload();
         localStorage.removeItem("user");
         document.getElementById("mainpage").style.display = "none";
         document.getElementById("firstpage").style.display = "block";
