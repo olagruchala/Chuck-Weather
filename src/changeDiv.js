@@ -40,7 +40,7 @@ function changeDiv ()
     else {
         //Wyświetlamy imie użytkownika na pierwszej stronie powitalnej dla zapisanego użytkownika
         document.getElementById("terazNieWiem").innerHTML =
-        `<h4>Cześć, ${storageUser}!</h4><br><button id='showWeatherBtn' class='btn btn-primary btn-lg mp-2'>Show weather</button>`;
+        `<h4>Hi, ${storageUser}!</h4><br><button id='showWeatherBtn' class='btn btn-primary btn-lg mp-2'>Show weather</button>`;
         const showWeatherButton = document.getElementById("showWeatherBtn");
         showWeatherButton.addEventListener('click', function ()
         {

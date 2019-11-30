@@ -1,4 +1,5 @@
 import {openWeatherApiKey} from "./config.js";
+import {airQualityIndexKey} from "./config.js";
 
 document.getElementById("geolocationBtn").addEventListener("click", () => {
     console.log('clik');
@@ -9,16 +10,11 @@ document.getElementById("geolocationBtn").addEventListener("click", () => {
         navigator.geolocation.getCurrentPosition(position => {
             lon = position.coords.longitude;
             lat = position.coords.latitude;
-        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${openWeatherApiKey}`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${openWeatherApiKey}`;
 
-        fetch(url)
-            .then(r => r.json())
-            .then(data => {
-                localStorage.setItem("city", data.name);
-                setWeatherFromData(data);
-                document.getElementById("secondpage").style.display = "none";
-                document.getElementById("thirdpage").style.display = "block";
-            })
+            fetchWeatherByGeolocation(url);
+            document.getElementById("secondpage").style.display = "none";
+            document.getElementById("thirdpage").style.display = "block";
         })
     }
 
@@ -43,13 +39,42 @@ function getSearchInputValue() {
     return document.getElementById('city').value;
 }
 
-function fetchWeatherByCity(city) {
+const fetchWeatherByCity = async (city) => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${openWeatherApiKey}`;
-
-    fetch(url)
-        .then(r => r.json())
-        .then(data => setWeatherFromData(data));
+    const r = await fetch(url);
+    const data = await r.json();
+    setWeatherFromData(data);
+    const res = await fetch(`https://api.waqi.info/feed/geo:${data.coord.lat};${data.coord.lon}/?token=${airQualityIndexKey}`);
+    const aqiData = await res.json();
+    setAqiFromData(aqiData);
 }
+
+const fetchWeatherByGeolocation = async (url) => {
+    const r = await fetch(url);
+    const data = await r.json();
+    localStorage.setItem("city", data.name);
+    setWeatherFromData(data);
+    const res = await fetch(`https://api.waqi.info/feed/geo:${data.coord.lat};${data.coord.lon}/?token=${airQualityIndexKey}`);
+    const aqiData = await res.json();
+    setAqiFromData(aqiData);
+}
+
+function setAqiFromData(aqiData) {
+    console.log(`aqi: ${aqiData.data.aqi}`);
+    const aqi = aqiData.data.aqi;
+    if(aqi<51)
+    document.getElementById('current_aqi').innerHTML = `Air quality: <strong style="color:#009966">good</strong>`;
+    else if (aqi<101)
+    document.getElementById('current_aqi').innerHTML = `Air quality: <strong style="color:#ffde33">moderate</strong>`;
+    else if (aqi<151)
+    document.getElementById('current_aqi').innerHTML = `Air quality: <strong style="color:#ff9933">unhealthy for sensitive groups</strong>`;
+    else if (aqi<201)
+    document.getElementById('current_aqi').innerHTML = `Air quality: <strong style="color:#cc0033">unhealthy</strong>`;
+    else if (aqi<300)
+    document.getElementById('current_aqi').innerHTML = `Air quality: <strong style="color:#660099">very unhealthy</strong>`;
+    else
+    document.getElementById('current_aqi').innerHTML = `Air quality: <strong style="color:#7e0023">hazardous</strong>`;
+ }
 
 function setWeatherFromData(data) {
     console.log(data);
